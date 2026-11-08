@@ -25,4 +25,5 @@ dist/
 !.env.example
 .firebaserc
 .firebase/
+.claude/settings.local.json
 *-debug.log
