@@ -1,0 +1,11 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.32,<1
+python-multipart>=0.0.18,<1
+pillow>=11,<13
+firebase-admin>=6.6,<8
+numpy>=1.26
+
+# Versão fixa: das versões testadas, foi a única em que o interpretador executou
+# o modelo, que depende de FlexConv2D (2.16.2, 2.19, 2.20 e 2.21 falharam).
+# Sem suporte em Python 3.13+: nesses ambientes a API responde 503 no /api/predict.
+tensorflow-cpu==2.18.1; python_version < "3.13"
