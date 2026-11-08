@@ -1,0 +1,8 @@
+# Arquivo explícito para que backend/models/pcb_yolo.tflite seja enviado no deploy,
+# mesmo estando fora do git.
+.venv/
+__pycache__/
+.pytest_cache/
+tests/
+.env
+.env.*

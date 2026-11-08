@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Modelos e dados
+*.keras
+*.tflite
+*.h5
+*.pt
+data/
+datasets/
+
+# Node / frontend
+node_modules/
+dist/
+
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+.firebaserc
+.firebase/
+.claude/settings.local.json
+*-debug.log
