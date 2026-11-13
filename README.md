@@ -2,6 +2,10 @@
 
 Inspeção óptica de placas de circuito impresso (PCB) pelo navegador: o usuário faz login, fotografa a placa e vê os defeitos de fabricação marcados na imagem e classificados em seis categorias. A detecção usa um YOLOv8 Small treinado com KerasCV no dataset PKU-Market-PCB.
 
+**App:** [pcb-inspect.web.app](https://pcb-inspect.web.app/)
+
+> **Nota:** o backend roda no Cloud Run, que desliga a instância quando fica sem uso. A primeira inferência depois de um período ocioso precisa iniciar o contêiner e carregar o modelo (*cold start*) e pode falhar por tempo esgotado. Se isso acontecer, envie a imagem de novo: a segunda tentativa costuma funcionar.
+
 ```
 Navegador (React) --login--> Firebase Auth
       | POST /api/predict + token de ID
